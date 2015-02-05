@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'time_dilation/time_dilation'
+  post 'time_dilation/time_dilation'
 
   get 'main/main'
 

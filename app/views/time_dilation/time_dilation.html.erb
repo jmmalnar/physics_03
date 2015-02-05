@@ -1,12 +1,12 @@
 <h1>TimeDilation</h1>
 <p>What is Time Dilation?</p>
 
-<%= form_tag(time_dilation_time_dilation_path, method: "get", action: "time_dilation") do |form|%>
-    <p>Please enter a temperature in degrees Farenheit</p>
-    <%= text_field_tag 'temperature', @farenheit %>
-    <%= submit_tag 'Convert' %>
-
-    <h2>Result: </h2>
-    <h3> <% @celsius %> </h3>
+<%= form_tag(time_dilation_time_dilation_path) do %>
+    <%= label_tag('Velocity:') %>
+    <%= text_field_tag(:velocity) %>
+    <%= label_tag('Time:') %>
+    <%= text_field_tag(:delta_t) %>
+    <%= submit_tag 'Dilate' %>
+    <%= text_field_tag('answer', @dt_p) %>
 
 <% end %>
