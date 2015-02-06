@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'cosmology/cosmology'
+
+  get 'cosmology/brief_history'
+
   get 'length_contraction/length_contraction'
   post 'length_contraction/length_contraction'
 
