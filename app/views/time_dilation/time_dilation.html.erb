@@ -1,4 +1,4 @@
-<head>
+<head xmlns="http://www.w3.org/1999/html">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -7,30 +7,31 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>Time Dilation</title>
 </head>
 
 <body>
 <div class="container">
     <div class="row">
-      <div class="col-md-4">1</div>
+      <div class="col-md-4"></div>
       <div class="col-md-4">
         <h1>Time Dilation</h1>
         <p>What is Time Dilation?</p>
       </div>
-      <div class="col-md-4">3</div>
+      <div class="col-md-4"></div>
     </div>
     <div class="row">
-      <div class="col-md-4">1.1</div>
+      <div class="col-md-4"></div>
       <div class="col-md-4">
         <%= form_tag(time_dilation_time_dilation_path) do %>
-          <%= label_tag('Velocity:') %>
-          <%= text_field_tag(:velocity) %>
-          <%= label_tag('Time:') %>
-          <%= text_field_tag(:delta_t) %>
-          <%= submit_tag 'Dilate' %>
+          <%= label_tag('Velocity:') %></br>
+          <%= text_field_tag(:velocity) %></br>
+          <%= label_tag('Time:') %></br>
+          <%= text_field_tag(:delta_t) %></br>
+          <%= submit_tag 'Dilate' %></br>
           <%= text_field_tag('answer', @dt_p) %>
         <% end %>
       </div>
-      <div class="col-md-4">3.3</div>
+      <div class="col-md-4"></div>
     </div>
 </div>
