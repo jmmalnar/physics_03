@@ -1,12 +1,32 @@
-<h1>Time Dilation</h1>
-<p>What is Time Dilation?</p>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-<%= form_tag(time_dilation_time_dilation_path) do %>
-    <%= label_tag('Velocity:') %>
-    <%= text_field_tag(:velocity) %>
-    <%= label_tag('Time:') %>
-    <%= text_field_tag(:delta_t) %>
-    <%= submit_tag 'Dilate' %>
-    <%= text_field_tag('answer', @dt_p) %>
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
-<% end %>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<div class="row">
+  <div class="col-md-4">Test</div>
+  <div class="col-md-4">
+    <h1>Time Dilation</h1>
+    <p>What is Time Dilation?</p>
+  </div>
+  <div class="col-md-4"></div>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <%= form_tag(time_dilation_time_dilation_path) do %>
+      <%= label_tag('Velocity:') %>
+      <%= text_field_tag(:velocity) %>
+      <%= label_tag('Time:') %>
+      <%= text_field_tag(:delta_t) %>
+      <%= submit_tag 'Dilate' %>
+      <%= text_field_tag('answer', @dt_p) %>
+    <% end %>
+  </div>
+    <div class="col-md-4"></div>
+</div>
