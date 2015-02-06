@@ -1,0 +1,2 @@
+module LengthContractionHelper
+end

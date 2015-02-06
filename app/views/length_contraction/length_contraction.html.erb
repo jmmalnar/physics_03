@@ -1,0 +1,12 @@
+<h1>Length Contraction</h1>
+<p>What is Length Contraction?</p>
+
+<%= form_tag(length_contraction_length_contraction_path) do %>
+    <%= label_tag('Velocity:') %>
+    <%= text_field_tag(:velocity) %>
+    <%= label_tag('Length:') %>
+    <%= text_field_tag(:length) %>
+    <%= submit_tag 'Contract' %>
+    <%= text_field_tag('answer', @dl) %>
+
+<% end %>

@@ -7,7 +7,4 @@ class TimeDilationController < ApplicationController
     #render 'time_dilation'
   end
 
-  def test
-    1 + 1
-  end
 end

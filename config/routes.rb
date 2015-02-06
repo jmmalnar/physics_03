@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'length_contraction/length_contraction'
+  post 'length_contraction/length_contraction'
+
   get 'time_dilation/time_dilation'
   post 'time_dilation/time_dilation'
 
