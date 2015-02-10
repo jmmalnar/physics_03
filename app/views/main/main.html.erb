@@ -7,11 +7,40 @@
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <title>Time Dilation</title>
+
+  <%= stylesheet_link_tag "application" %>
+
+  <title>The Physics Machine</title>
 </head>
 
 
+<body>
+<div class="container">
+  <div class="row" id="main_top_row">   <!-- Top Row -->
+    <div class="col-md-12"></div>
+  </div>
+  <div class="row">                     <!-- 2nd row -->
+    <div class="col-md-4">Classical Mechanics</div>
+    <div class="col-md-4">Electricity and Magnetism</div>
+    <div class="col-md-4">Quantum Mechanics</div>
+  </div>
+  <div class="row">                     <!-- Middle Row -->
+    <div class="col-md-4">Math</div>
+    <div class="col-md-4" id="main_title">
+      <h1 id="title">The Physics Machine</h1>
+      <%= link_to "Time Dilation", "/time_dilation/time_dilation" %>
+      <%= link_to "Length Contraction", "/length_contraction/length_contraction" %>
+    </div>
+    <div class="col-md-4">Statistical Mechanics</div>
+  </div>
+  <div class="row">                     <!-- 4th Row -->
+    <div class="col-md-4">Astronomy</div>
+    <div class="col-md-4">Cosmology</div>
+    <div class="col-md-4">Modern Physics</div>
+  </div>
+  <div class="row" id="main_bottom_row">    <!-- Bottom Row -->
+    <div class="col-md-12"></div>
+  </div>
+</div>
+</body>
 
-<h1>The Physics Machine</h1>
-<%= link_to "Time Dilation", "/time_dilation/time_dilation" %>
-<%= link_to "Length Contraction", "/length_contraction/length_contraction" %>
