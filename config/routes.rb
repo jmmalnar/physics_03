@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'doppler_shift/doppler_shift'
+  post 'doppler_shift/doppler_shift'
+
   get 'index/index'
 
   get 'length_contraction/length_contraction'

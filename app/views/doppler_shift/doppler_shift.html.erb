@@ -1,0 +1,72 @@
+<head xmlns="http://www.w3.org/1999/html">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <%= stylesheet_link_tag "time_dilation.css.scss" %>
+
+  <title>The Doppler Effect</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h1>The Doppler Effect</h1>
+      <p>What is Doppler Shift?</p>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" id="form">
+      <%= form_tag doppler_shift_doppler_shift_path do %>
+          <%= label_tag('Velocity:') %> </br>
+          <%= text_field_tag(:velocity) %>
+          <%= select_tag(:units, options_for_select([['m/s', 1], ['mph', 2], ['kph', 3], ['beta', 4]])) %> </br>
+          <%= label_tag('Frequency:') %> </br>
+          <%= text_field_tag(:delta_t) %> s </br>
+          <%= submit_tag 'Shift' %> </br>
+          <%= text_field_tag('answer', @dt_p) %>
+      <% end %>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" id="black_box">
+      <p><input type="button" value="Click Me" id="ToggleMe1a" /></p>
+      <p id="ToggleMe1b">
+        The formula for Time Dilation is
+        $$t=\frac{t_0}{\sqrt{1-\beta^2}}$$
+
+        You asked, "if I travel at a speed of <%= params[:velocity] %>
+        <%= @u %>
+        for <%= params[:delta_t] %>, how much time will pass
+        in a stationary frame.
+
+        Plug the values you inputted into the given formula for Time Dilation.
+        $$t=\frac{<%= params[:delta_t] %>}{\sqrt{1-<%= @b %>^2}}=<%= @dt_p %>$$
+      </p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#ToggleMe1a").click(function() {
+            $("#ToggleMe1b").toggle();
+        });
+    });
+</script>
+
+</body>

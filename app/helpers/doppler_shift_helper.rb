@@ -1,0 +1,2 @@
+module DopplerShiftHelper
+end
