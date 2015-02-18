@@ -16,19 +16,19 @@
 
 <body>
 <div class="container">
-  <div class="row" id="main_top_row">   <!-- Top Row -->
+  <div class="row" id="top_row">   <!-- Top Row -->
     <div class="col-md-12"></div>
   </div>
-  <div class="row">                     <!-- 2nd row -->
+  <div class="row" id="second_row">                     <!-- 2nd row -->
     <div class="col-md-4"></div>
     <div class="col-md-4"></div>
     <div class="col-md-4"></div>
   </div>
   <div class="row">                     <!-- Middle Row -->
     <div class="col-md-12" id="main_title">
-      <%= image_tag("main_title_bar_code.png", :onmouseover => "main_title_01.png") %></br>
-      <%= link_to "Time Dilation", "/time_dilation/time_dilation" %>
-      <%= link_to "Length Contraction", "/length_contraction/length_contraction" %>
+      <%= link_to "/time_dilation/time_dilation" do
+        image_tag("main_title_bar_code.png", onmouseover: "this.src='#{asset_path('main_title_bar_code_hover.png')}'", onmouseout: "this.src='#{asset_path('main_title_bar_code.png')}'")
+      end %>
     </div>
   </div>
   <div class="row">                     <!-- 4th Row -->
