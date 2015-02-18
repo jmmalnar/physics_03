@@ -16,6 +16,7 @@
 <%= form_tag(length_contraction_length_contraction_path) do %>
     <%= label_tag('Velocity:') %>
     <%= text_field_tag(:velocity) %>
+    <%= select_tag(:units, options_for_select([['m/s', 1], ['mph', 2], ['kph', 3], ['beta', 4]])) %>
     <%= label_tag('Length:') %>
     <%= text_field_tag(:length) %>
     <%= submit_tag 'Contract' %>
