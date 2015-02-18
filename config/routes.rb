@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'index/index'
+
   get 'length_contraction/length_contraction'
   post 'length_contraction/length_contraction'
 

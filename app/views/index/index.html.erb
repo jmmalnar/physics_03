@@ -1,3 +1,4 @@
+
 <head xmlns="http://www.w3.org/1999/html">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -20,17 +21,16 @@
     <div class="col-md-12"></div>
   </div>
   <div class="row" id="second_row">                     <!-- 2nd row -->
-    <div class="col-md-2"></div>
-    <div class="col-md-6"></div>
-    <div class="col-md-2"></div>
+    <div class="col-md-3">MATH</div>
+    <div class="col-md-3" id="physics_logo">
+      PHYSICS
+    </div>
+    <div class="col-md-3">ASTRONOMY</div>
+    <div class="col-md-3">CHEMISTRY</div>
   </div>
   <div class="row">                     <!-- Middle Row -->
     <div class="col-md-12" id="main_title">
-      <%= link_to "/index/index" do
-        image_tag("main_title_bar_code.png",
-                  onmouseover: "this.src='#{asset_path('main_title_bar_code_hover.png')}'",
-                  onmouseout: "this.src='#{asset_path('main_title_bar_code.png')}'")
-      end %>
+      <%= image_tag("main_title_bar_code.png") %>
     </div>
   </div>
   <div class="row">                     <!-- 4th Row -->
