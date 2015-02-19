@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'universe_history/universe_history'
+
   get 'index/index'
 
   get 'length_contraction/length_contraction'
