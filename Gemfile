@@ -44,5 +44,5 @@ gem 'spring',        group: :development
 
 gem 'formtastic', '~> 3.0'
 
-# Use chartkick for data visualization, plotting and graphing
-gem "chartkick"
+# For graphing and plotting use HighCharts with lazy_high_charts gem
+gem 'lazy_high_charts'

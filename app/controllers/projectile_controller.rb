@@ -1,23 +1,29 @@
 class ProjectileController < ApplicationController
   # Need to get x_0, v_0, t_0, total_time
   def projectile
-    step_size = 0.1
+    dt = 0.1
     x_0 = params[:x_0].to_f
     v_0 = params[:v_0].to_f
     t_0 = params[:t_0].to_f
-    total_time = params[:total_time].to_f
-    @x_t = [[x_0, t_0]]
+    @x_t = []
     g = 9.8
 
-    (step_size..total_time).step(step_size) do |dt|
-      x_0 = -0.5*g*(dt**2) + v_0*dt + x_0
-      t_0 = t_0 + dt
-      @x_t << [x_0, t_0]
+    # Time to hit the ground?
+    @hit = Math.sqrt((2*x_0)/g)
 
-      if (x_0 < 0)
-        puts "Total time elapsed until it hits the ground #{t_0} seconds"
-        break
-      end
+    (0..@hit.round(1)).step(dt) do |t|
+      x = -0.5*g*(t**2) + v_0*t + x_0
+      @x_t << [t.round(2), x.round(3)]
+    end
+
+    @graph = LazyHighCharts::HighChart.new('graph') do |f|
+      f.chart(:height => '300')
+      f.series(:type => 'scatter', :name =>
+          '% Established over planted',
+               data: @x_t, :color => '#00463f')
+      f.plotOptions({line: {enableMouseTracking: false}})
+      f.legend({:align => 'center', :verticalAlign=> 'top',
+                :y => 0, :borderWidth => 0, style: {color: "#333"}})
     end
 
   end
