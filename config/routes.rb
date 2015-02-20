@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'projectile/projectile'
+  post 'projectile/projectile'
+
   get 'index/index'
 
   get 'length_contraction/length_contraction'

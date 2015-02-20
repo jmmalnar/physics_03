@@ -1,0 +1,22 @@
+<head xmlns="http://www.w3.org/1999/html">
+
+  <title>Time Dilation</title>
+</head>
+
+<h1>Length Contraction</h1>
+<p>What is Length Contraction?</p>
+
+<%= form_tag(projectile_projectile_path) do %>
+    <%= label_tag('Starting value of x (m):') %>
+    <%= text_field_tag(:x_0) %>
+    <%= label_tag('Initial velocity (m/s):') %>
+    <%= text_field_tag(:v_0) %>
+    <%= label_tag('Starting time (usually 0) (s):') %>
+    <%= text_field_tag(:t_0) %>
+    <%= label_tag('Total time (s):') %>
+    <%= text_field_tag(:total_time) %>
+    <%= submit_tag 'Contract' %>
+    <%= text_field_tag('answer', @x_t) %>
+<% end %>
+
+<%= line_chart (@x_t) %>
