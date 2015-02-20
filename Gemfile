@@ -43,3 +43,6 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'formtastic', '~> 3.0'
+
+# Use chartkick for data visualization, plotting and graphing
+gem "chartkick"
