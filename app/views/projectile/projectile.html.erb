@@ -6,43 +6,52 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1>Free Fall</h1>
-      <p>What is Length Contraction?</p>
+      <h1>Projectile Motion</h1>
+      <p>Projectile motion explanation</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6" id="projectile_form">
+    <div class="col-md-4">
+      <p>
+      Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics. Projectile motion is something that can be described
+      by Physics.
+      </p>
+    </div>
+    <div class="col-md-8" id="free_fall_form">
       <%= form_tag(projectile_projectile_path) do %>
         <%= label_tag('Starting value of x (m):') %>
         <%= text_field_tag(:x_0) %></br>
+        <%= label_tag('Starting value of y (m):') %>
+        <%= text_field_tag(:y_0) %></br>
         <%= label_tag('Initial velocity (m/s):') %>
         <%= text_field_tag(:v_0) %></br>
-        <%= label_tag('Starting time (usually 0) (s):') %>
-        <%= text_field_tag(:t_0) %></br>
+        <%= label_tag('Angle (rad):') %>
+        <%= text_field_tag(:angle) %></br>
         <%= submit_tag 'Compute' %></br>
-        <%= label_tag('Time it takes to hit the ground (s):') %></br>
-        <%= text_field_tag('answer', @hit) %>
+        <%= label_tag('Maximum height (m):') %>
+        <%= text_field_tag('answer', @y_max.round(2)) %></br>
+        <%= label_tag('Maximum range (m):') %>
+        <%= text_field_tag('answer', @distance.round(2)) %></br>
+        <%= label_tag('Time of flight (s):') %>
+        <%= text_field_tag('answer', @tof.round(2)) %></br>
+          <%= label_tag('Time of flight general (s):') %>
+          <%= text_field_tag('answer', @tof_gen.round(2)) %></br>
       <% end %>
     </div>
-    <div class="col-md-6"></div>
   </div>
   <div class="row">
     <div class="col-md-6">
       <%= high_chart("some_id", @graph) %>
     </div>
     <div class="col-md-6">
-      <table class="table table-striped">
-        <tr>
-          <td>Time (s)</td>
-          <td>Height (m)</td>
-        </tr>
-        <% @x_t.each do |x| %>
-            <tr>
-              <td><%= x[0] %></td>
-              <td><%= x[1] %></td>
-            </tr>
-        <% end %>
-      </table>
+
     </div>
   </div>
 </div>

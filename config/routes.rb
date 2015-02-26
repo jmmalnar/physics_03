@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'projectile/free_fall'
+  post 'projectile/free_fall'
+
   get 'projectile/projectile'
   post 'projectile/projectile'
 
