@@ -3,4 +3,7 @@
   <data-source source="LOCAL" name="Rails the_physics_machine_03: development" uuid="d4411954-c1a1-4882-92e7-e1e2b98e01f1">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails the_physics_machine_03: production" uuid="7d49b799-3218-48a0-af2a-9594e7d2eff3">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
